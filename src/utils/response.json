@@ -1,0 +1,277 @@
+{
+  "id": 241386754,
+  "dashboard_tabs": [
+    {
+      "default": false,
+      "id": 774553602,
+      "name": "Nature",
+      "dashboard_views": [
+        {
+          "default": false,
+          "id": 235465218,
+          "name": "Mountains",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_960_720.png",
+              "name": "mountain_1",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_960_720.jpg",
+              "name": "mountain_2",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067_960_720.png",
+              "name": "mountain_3",
+              "height": 1,
+              "width": 1
+            }
+          ]
+        },
+        {
+          "default": false,
+          "id": 235465474,
+          "name": "Fields",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079_960_720.jpg",
+              "name": "field_1",
+              "height": 1.5,
+              "width": 1.5
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886_960_720.jpg",
+              "name": "field_2",
+              "height": 1.5,
+              "width": 1.5
+            }
+          ]
+        },
+        {
+          "default": false,
+          "id": 235465730,
+          "name": "Water",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879_960_720.jpg",
+              "name": "water_1",
+              "height": 1.5,
+              "width": 1.5
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2013/11/28/10/03/river-219972_960_720.jpg",
+              "name": "water_2",
+              "height": 1.5,
+              "width": 1.5
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/01/08/15/48/river-593146_960_720.jpg",
+              "name": "water_3",
+              "height": 1.5,
+              "width": 1.5
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_960_720.jpg",
+              "name": "water_4",
+              "height": 1.5,
+              "width": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default": false,
+      "id": 774553858,
+      "name": "People",
+      "dashboard_views": [
+        {
+          "default": false,
+          "id": 235465218,
+          "name": "Men",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601_960_720.jpg",
+              "name": "man_1",
+              "height": 1,
+              "width": 1
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2014/06/18/13/44/emotions-371238_960_720.jpg",
+              "name": "man_2",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_960_720.jpg",
+              "name": "man_3",
+              "height": 1,
+              "width": 1
+            }
+          ]
+        },
+        {
+          "default": false,
+          "id": 235465474,
+          "name": "Women",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/07/09/00/29/woman-837156_960_720.jpg",
+              "name": "woman_1",
+              "height": 1,
+              "width": 1
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg",
+              "name": "woman_2",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/12/19/21/36/woman-1919143_960_720.jpg",
+              "name": "woman_3",
+              "height": 2,
+              "width": 2
+            }
+          ]
+        },
+        {
+          "default": false,
+          "id": 235465730,
+          "name": "Children",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/02/19/11/36/microphone-1209816_960_720.jpg",
+              "name": "child_1",
+              "height": 1.5,
+              "width": 1.5
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_960_720.jpg",
+              "name": "child_2",
+              "height": 1.5,
+              "width": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default": false,
+      "id": 774554114,
+      "name": "Animals",
+      "dashboard_views": [
+        {
+          "default": false,
+          "id": 235465218,
+          "name": "Cats",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg",
+              "name": "cat_1",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/03/27/13/16/maine-coon-694730_960_720.jpg",
+              "name": "cat_2",
+              "height": 1,
+              "width": 1
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2014/03/29/09/17/cat-300572_960_720.jpg",
+              "name": "cat_3",
+              "height": 1,
+              "width": 1
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg",
+              "name": "cat_4",
+              "height": 1,
+              "width": 1
+            }
+          ]
+        },
+        {
+          "default": false,
+          "id": 235465474,
+          "name": "Dogs",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074_960_720.jpg",
+              "name": "dog_1",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2015/03/26/09/54/pug-690566_960_720.jpg",
+              "name": "dog_2",
+              "height": 1,
+              "width": 1
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_960_720.jpg",
+              "name": "dog_3",
+              "height": 1,
+              "width": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default": true,
+      "id": 774554370,
+      "name": "Cars",
+      "dashboard_views": [
+        {
+          "default": false,
+          "id": 235465218,
+          "name": "Old cars",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/02/13/13/11/oldtimer-1197800_960_720.jpg",
+              "name": "old_car_1",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/05/18/10/52/buick-1400243_960_720.jpg",
+              "name": "old_car_2",
+              "height": 1,
+              "width": 1
+            }
+          ]
+        },
+        {
+          "default": false,
+          "id": 235465474,
+          "name": "New cars",
+          "tiles": [
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/11/22/23/44/porsche-1851246_960_720.jpg",
+              "name": "new_car_1",
+              "height": 2,
+              "width": 2
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/12/03/18/57/car-1880381_960_720.jpg",
+              "name": "new_car_2",
+              "height": 1,
+              "width": 1
+            },
+            {
+              "url": "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
+              "name": "new_car_3",
+              "height": 2,
+              "width": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

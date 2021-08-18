@@ -1,0 +1,9 @@
+.tabs-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    background: linear-gradient(90deg, rgb(10, 165, 196) 0%, rgb(6, 91, 124) 100%);
+    button > :last-child {
+        margin-left: 5px;
+        height: max-content;
+    }
+}
