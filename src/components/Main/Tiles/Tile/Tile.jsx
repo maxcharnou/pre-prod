@@ -21,7 +21,9 @@ export default function Tile(props) {
         setUrl(e.target.value)
     }
 
-    const submitChanges = (e) => {
+    const submitChanges = () => {
+        console.log([url, name, props.data.name]);
+        props.changeHandler(url, name, props.data.name)
         setIsEdit(!isEdit);
     }
 
@@ -37,8 +39,8 @@ export default function Tile(props) {
         <button className="edit-card" onClick={handleMode}>
             <FontAwesomeIcon icon={faEdit} color="red"></FontAwesomeIcon>
         </button>
-      {isEdit ? <input type="text" placeholder="Input URL for change picture" onInput={handleNameInput}/>:<img src={props.data.url} alt={props.data.name} />}
-      {isEdit ? <input type="text" placeholder="Input name of picture" onInput={handleUrlInput}/>:<p>{props.data.name}</p>}
+      {isEdit ? <input type="text" placeholder="Input URL for change picture" onInput={handleUrlInput}/>:<img src={props.data.url} alt={props.data.name} />}
+      {isEdit ? <input type="text" placeholder="Input name of picture" onInput={handleNameInput}/>:<p>{props.data.name}</p>}
       {isEdit && <button className="submit-edit-card" onClick={submitChanges}>Submit changes</button>}
     </div>
   );

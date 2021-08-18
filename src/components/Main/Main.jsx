@@ -30,17 +30,37 @@ export default function Main() {
     setData(nData);
   };
 
-  const addTile = (url, name) => {
-    const newData = { ...data };
-    const newTile = {
-      url: url,
-      name: name,
-      height: 1,
-      width: 1,
-    };
-    newData.dashboard_tabs[defaultTab].dashboard_views[defaultView].tiles.push(
-      newTile
+  const changeDefaultView = (name) => {
+    const nData = { ...data };
+    nData.dashboard_tabs[defaultTab].dashboard_views.forEach(
+      (el) => (el.default = false)
     );
+    data.dashboard_tabs[defaultTab].dashboard_views.find(
+      (el) => el.name === name
+    ).default = true;
+    setData(nData);
+  };
+
+  const changeTile = (url, newName, oldName) => {
+    const newData = { ...data };
+    const idx = newData.dashboard_tabs[defaultTab].dashboard_views[defaultView].tiles.findIndex(
+      (el) => el.name === oldName
+    ) || 0;
+    newData.dashboard_tabs[defaultTab].dashboard_views[defaultView].tiles[idx].url = url;
+    newData.dashboard_tabs[defaultTab].dashboard_views[defaultView].tiles[idx].name = newName;
+    setData(newData);
+    console.log(data)
+  }
+
+  const addTab = (name) => {
+    const newData = { ...data };
+    const newTab = {
+      default: false,
+      id: 0,
+      name: name,
+      dashboard_views: [],
+    };
+    newData.dashboard_tabs.push(newTab);
     setData(newData);
   };
 
@@ -56,27 +76,18 @@ export default function Main() {
     setData(newData);
   };
 
-  const addTab = (name) => {
+  const addTile = (url, name) => {
     const newData = { ...data };
-    const newTab = {
-      default: false,
-      id: 0,
+    const newTile = {
+      url: url,
       name: name,
-      dashboard_views: [],
+      height: 1,
+      width: 1,
     };
-    newData.dashboard_tabs.push(newTab);
-    setData(newData);
-  };
-
-  const changeDefaultView = (name) => {
-    const nData = { ...data };
-    nData.dashboard_tabs[defaultTab].dashboard_views.forEach(
-      (el) => (el.default = false)
+    newData.dashboard_tabs[defaultTab].dashboard_views[defaultView].tiles.push(
+      newTile
     );
-    data.dashboard_tabs[defaultTab].dashboard_views.find(
-      (el) => el.name === name
-    ).default = true;
-    setData(nData);
+    setData(newData);
   };
 
   const deleteTab = (name) => {
@@ -125,6 +136,7 @@ export default function Main() {
             data={data.dashboard_tabs[defaultTab]?.dashboard_views[defaultView]}
             addHandler={addTile}
             deleteHandler={deleteTile}
+            changeHandler={changeTile}
           />
         }
       </div>
