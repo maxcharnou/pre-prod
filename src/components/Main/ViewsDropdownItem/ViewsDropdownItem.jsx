@@ -1,6 +1,5 @@
-import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import PropTypes from 'prop-types';
 import "./ViewsDropdownItem.scss";
 
 export default function ViewsDropdownItem(props) {
@@ -12,4 +11,8 @@ export default function ViewsDropdownItem(props) {
     </option>
     </>
   );
+}
+
+ViewsDropdownItem.propTypes = {
+  data: PropTypes.object,
 }

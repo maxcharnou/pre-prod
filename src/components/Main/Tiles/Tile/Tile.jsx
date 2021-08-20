@@ -1,5 +1,6 @@
-import { faClosedCaptioning, faEdit, faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from 'prop-types';
 import React from "react";
 import "./Tile.scss";
 
@@ -45,3 +46,11 @@ export default function Tile(props) {
     </div>
   );
 }
+
+Tile.propTypes = {
+  data: PropTypes.object,
+  delHandler: PropTypes.func,
+  changeHandler: PropTypes.func,
+}
+
+

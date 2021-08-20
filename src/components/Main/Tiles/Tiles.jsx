@@ -14,7 +14,7 @@ export default function Tiles() {
     setLocalData(data);
     setLocalTab(getDefaultTab());
     setLocalView(getDefaultView());
-  }, [data])
+  }, [data, getDefaultTab, getDefaultView])
 
   return (
     <div className="tiles-wrapper">

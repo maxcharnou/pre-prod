@@ -8,7 +8,6 @@ import "./ViewSelector.scss";
 export default function ViewSelector() {
   const {
     data,
-    defaultTab,
     changeDefaultView,
     addView,
     getDefaultTab,
@@ -39,7 +38,7 @@ export default function ViewSelector() {
   useEffect(() => {
     setLocalData(data);
     setLocalTab(getDefaultTab());
-  }, [data]);
+  }, [data, getDefaultTab]);
 
   return (
     <div className={"selector-status"}>

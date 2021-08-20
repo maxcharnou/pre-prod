@@ -3,6 +3,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import PropTypes from 'prop-types';
 import "./NewTile.scss";
 
 export default function NewTile(props) {
@@ -66,4 +67,8 @@ export default function NewTile(props) {
       )}
     </div>
   );
+}
+
+NewTile.propTypes = {
+  handler: PropTypes.func,
 }

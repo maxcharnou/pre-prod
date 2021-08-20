@@ -11,17 +11,17 @@ export const useDataContextControls = () => {
   const [defaultView, setDefaultView] = React.useState(0);
 
   const useSetNewData = (data, newData) => setData(newData);
-  const getDefaultTab = () => {
+  const getDefaultTab = React.useCallback(() => {
     const idx = data.dashboard_tabs.findIndex((el) => el.default);
     return idx > 0 ? idx : 0;
-  };
+  }, [data]);
 
-  const getDefaultView = () => {
-    const idx = data.dashboard_tabs[getDefaultTab()].dashboard_views.findIndex(
+  const getDefaultView = React.useCallback(() => {
+    const idx = data.dashboard_tabs[defaultTab].dashboard_views.findIndex(
       (el) => el.default
     );
     return idx > 0 ? idx : 0;
-  };
+  },[data.dashboard_tabs, defaultTab]);
 
   const changeDefaultTab = (name) => {
     const nData = { ...data };
