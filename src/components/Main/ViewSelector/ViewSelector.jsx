@@ -22,7 +22,6 @@ export default function ViewSelector() {
   };
 
   const handleChange = (e) => {
-    console.log(e.target.label)
     changeDefaultView(e.target.value);
   };
 

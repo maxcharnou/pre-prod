@@ -38,6 +38,7 @@ export const useDataContextControls = () => {
       (el) => el.name === name
     ).default = true;
     setData(nData);
+    console.log(data)
   };
 
   const changeTile = (url, newName, oldName) => {
@@ -117,6 +118,11 @@ export const useDataContextControls = () => {
     ].tiles.splice(idx, 1);
     setData(newData);
   };
+
+  React.useEffect(() => {
+    setDefaultTab(getDefaultTab());
+    setDefaultView(getDefaultView());
+  }, [data])
 
 
   return {
