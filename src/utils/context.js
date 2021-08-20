@@ -10,7 +10,6 @@ export const useDataContextControls = () => {
   const [defaultTab, setDefaultTab] = React.useState(0);
   const [defaultView, setDefaultView] = React.useState(0);
 
-  const useSetNewData = (data, newData) => setData(newData);
   const getDefaultTab = React.useCallback(() => {
     const idx = data.dashboard_tabs.findIndex((el) => el.default);
     return idx > 0 ? idx : 0;
@@ -35,7 +34,6 @@ export const useDataContextControls = () => {
     nData.dashboard_tabs[defaultTab].dashboard_views.forEach(
       (el) => (el.default = false)
     );
-    console.log(data.dashboard_tabs[defaultTab].dashboard_views, defaultTab, defaultView)
     data.dashboard_tabs[defaultTab].dashboard_views.find(
       (el) => el.name === name
     ).default = true;
@@ -55,7 +53,6 @@ export const useDataContextControls = () => {
       idx
     ].name = newName;
     setData(newData);
-    console.log(data);
   };
 
   const addTab = (name) => {
@@ -100,10 +97,12 @@ export const useDataContextControls = () => {
     const newData = { ...data };
     const idx = data.dashboard_tabs.findIndex((el) => el.name === name);
     newData.dashboard_tabs.splice(idx, 1);
-    newData.dashboard_tabs[idx - 1].default = true;
-    newData.dashboard_tabs[idx - 1].dashboard_views[0].default = true;
-    getDefaultTab();
-    getDefaultView();
+    if(newData.dashboard_tabs.length > 0) {
+      newData.dashboard_tabs[idx > 0 ? idx - 1 : 0].default = true;
+      newData.dashboard_tabs[idx > 0 ? idx - 1 : 0].dashboard_views[0].default = true;
+    }
+    setDefaultTab(idx > 0 ? idx - 1 : 0);
+    setDefaultView(0);
     setData(newData);
   };
 
@@ -119,10 +118,6 @@ export const useDataContextControls = () => {
     setData(newData);
   };
 
-  React.useEffect(() => {
-    setDefaultTab(getDefaultTab());
-    setDefaultView(getDefaultView());
-  }, [data, getDefaultTab, getDefaultView])
 
   return {
     DataContext,
@@ -142,7 +137,6 @@ export const useDataContextControls = () => {
     setData,
     setDefaultTab,
     setDefaultView,
-    useDataContext,
-    useSetNewData,
+    useDataContext
   };
 };

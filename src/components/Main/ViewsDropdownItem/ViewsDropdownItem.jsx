@@ -15,4 +15,5 @@ export default function ViewsDropdownItem(props) {
 
 ViewsDropdownItem.propTypes = {
   data: PropTypes.object,
+  handler: PropTypes.func
 }

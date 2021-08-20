@@ -23,7 +23,6 @@ export default function Tile(props) {
     }
 
     const submitChanges = () => {
-        console.log([url, name, props.data.name]);
         props.changeHandler(url, name, props.data.name)
         setIsEdit(!isEdit);
     }

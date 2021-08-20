@@ -6,7 +6,7 @@ import Tab from "./Tab/Tab";
 import "./Tabs.scss";
 
 export default function Tabs() {
-  const {changeDefaultTab, data, addTab, deleteTab} = useDataContext()
+  const {changeDefaultTab, data, addTab, deleteTab, defaultTab, defaultView} = useDataContext()
   const [inputValue, setInputValue] = React.useState('');
   const [editMode, setEditMode] = React.useState(false);
   const [localData, setLocalData] = React.useState(data);
@@ -25,12 +25,12 @@ export default function Tabs() {
   }
 
   React.useEffect(() => {
-    setLocalData(data)
-  }, [data])
+    setLocalData(data);
+  }, [data, defaultTab])
 
   return (
     <div className="tabs-wrapper">
-      {localData.dashboard_tabs.map((el) => (
+      {localData.dashboard_tabs && localData.dashboard_tabs && localData.dashboard_tabs.map((el) => (
         <Tab data={el} key={el.id} handler={changeDefaultTab} delHandler={deleteTab}/>
       ))}
       <button className="add_view" onClick={switchMode}>

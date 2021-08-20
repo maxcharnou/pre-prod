@@ -10,19 +10,19 @@ export default function ViewSelector() {
     data,
     changeDefaultView,
     addView,
-    getDefaultTab,
+    defaultTab,
+    defaultView
   } = React.useContext(DataContext);
   const [inputValue, setInputValue] = React.useState("");
   const [editMode, setEditMode] = React.useState(false);
   const [localData, setLocalData] = React.useState(data);
-  const [localTab, setLocalTab] = React.useState(getDefaultTab());
 
   const switchMode = () => {
     setEditMode(!editMode);
   };
 
   const handleChange = (e) => {
-    console.log(e.target.value)
+    console.log(e.target.label)
     changeDefaultView(e.target.value);
   };
 
@@ -37,15 +37,14 @@ export default function ViewSelector() {
 
   useEffect(() => {
     setLocalData(data);
-    setLocalTab(getDefaultTab());
-  }, [data, getDefaultTab]);
+  }, [data]);
 
   return (
     <div className={"selector-status"}>
       <span>Saved: </span>
       <select name="select" id="view-select" onChange={handleChange}>
-        {localData.dashboard_tabs[localTab]?.dashboard_views.map((el) => (
-          <ViewsDropdownItem data={el} key={el.name + "_view"} />
+        {localData.dashboard_tabs[defaultTab]?.dashboard_views.map((el) => (
+          <ViewsDropdownItem data={el} key={el.name + "_view" }/>
         ))}
       </select>
       <button className="add_view" onClick={switchMode}>
