@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode=development --open",
     "build": "webpack --mode=production",
-    "lint": "eslint . --config ./.eslint.json",
+    "lint": "eslint . --config ./.eslintrc",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install"
   },
