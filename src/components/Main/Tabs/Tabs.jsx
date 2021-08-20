@@ -1,12 +1,15 @@
-import { faCog, faPlus, faSortDown } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useDataContext } from "../../../utils/context";
 import Tab from "./Tab/Tab";
 import "./Tabs.scss";
 
-export default function Tabs(props) {
+export default function Tabs() {
+  const {changeDefaultTab, data, addTab, deleteTab} = useDataContext()
   const [inputValue, setInputValue] = React.useState('');
   const [editMode, setEditMode] = React.useState(false);
+  const [localData, setLocalData] = React.useState(data);
 
   const switchMode = () => {
     setEditMode(!editMode);
@@ -17,14 +20,18 @@ export default function Tabs(props) {
   }
 
   const submitCreation = () => {
-    props.addHandler(inputValue);
+    addTab(inputValue);
     switchMode();
   }
 
+  React.useEffect(() => {
+    setLocalData(data)
+  }, [data])
+
   return (
     <div className="tabs-wrapper">
-      {props?.tabs?.map((el) => (
-        <Tab data={el} key={el.id} handler={props.handler} delHandler={props.delHandler}/>
+      {localData.dashboard_tabs.map((el) => (
+        <Tab data={el} key={el.id} handler={changeDefaultTab} delHandler={deleteTab}/>
       ))}
       <button className="add_view" onClick={switchMode}>
         <FontAwesomeIcon

@@ -4,9 +4,6 @@ import React from "react";
 import "./ViewsDropdownItem.scss";
 
 export default function ViewsDropdownItem(props) {
-  const deleteView = (e) => {
-    props.delHandler(props.data.name);
-  };
 
   return (
     <>
