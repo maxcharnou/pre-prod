@@ -16,7 +16,7 @@ export const useDataContextControls = () => {
   }, [data]);
 
   const getDefaultView = React.useCallback(() => {
-    const idx = data.dashboard_tabs[defaultTab].dashboard_views.findIndex(
+    const idx = data?.dashboard_tabs[defaultTab]?.dashboard_views.findIndex(
       (el) => el.default
     );
     return idx > 0 ? idx : 0;
@@ -38,7 +38,6 @@ export const useDataContextControls = () => {
       (el) => el.name === name
     ).default = true;
     setData(nData);
-    console.log(data)
   };
 
   const changeTile = (url, newName, oldName) => {
