@@ -122,7 +122,7 @@ export const useDataContextControls = () => {
   React.useEffect(() => {
     setDefaultTab(getDefaultTab());
     setDefaultView(getDefaultView());
-  }, [data])
+  }, [data, getDefaultTab, getDefaultView])
 
 
   return {

@@ -10,8 +10,7 @@ export default function ViewSelector() {
     data,
     changeDefaultView,
     addView,
-    defaultTab,
-    defaultView
+    defaultTab
   } = React.useContext(DataContext);
   const [inputValue, setInputValue] = React.useState("");
   const [editMode, setEditMode] = React.useState(false);

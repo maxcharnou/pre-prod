@@ -6,7 +6,7 @@ import Tab from "./Tab/Tab";
 import "./Tabs.scss";
 
 export default function Tabs() {
-  const {changeDefaultTab, data, addTab, deleteTab, defaultTab, defaultView} = useDataContext()
+  const {changeDefaultTab, data, addTab, deleteTab, defaultTab} = useDataContext()
   const [inputValue, setInputValue] = React.useState('');
   const [editMode, setEditMode] = React.useState(false);
   const [localData, setLocalData] = React.useState(data);
